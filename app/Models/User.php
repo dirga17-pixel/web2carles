@@ -35,4 +35,10 @@ protected $fillable = [
             'password' => 'hashed',
         ];
     }
+
+    public function borrows()
+    {
+        return $this->hasMany(Borrows::class);
+    }
 }
+
