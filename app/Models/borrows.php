@@ -12,4 +12,20 @@ class borrows extends Model
         'date_start',
         'date_end',
     ];
+
+    protected function casts()
+    {
+        return [
+            'date_start' => 'date',
+            'date_end' => 'date',
+        ];
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function book()
+    {
+        return $this->belongsTo(books::class);
+    }
 }
