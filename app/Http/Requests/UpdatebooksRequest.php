@@ -29,4 +29,5 @@ class UpdatebooksRequest extends FormRequest
             'relase_date' => ['sometimes', 'date'],
         ];
     }
-}
+} 
+
